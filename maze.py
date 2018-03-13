@@ -53,8 +53,20 @@ def print_maze(maze):
 mazes = []
 generate_mazes(mazes, '')
 
+def check_edges(maze):
+    top = maze[0,:]
+    bottom = maze[6,:]
+    left = maze[1:5,0]
+    right = maze[1:5,6]
+    edges = [top, bottom, left, right]
+    print(edges)
+    if edges.count(0):
+        return True
+    else:
+        return False
+
 i = 0
-for maze in mazes[0:5]:
+for maze in mazes[0:20]:
     i += 1
-    print_maze(maze)
-    print(type(maze))
+    if check_edges(maze):
+        print_maze(maze)

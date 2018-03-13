@@ -44,7 +44,7 @@ class MAZE:
     def check_maze_size(self):
         return True
 
-        
+
 class BOT:
     def __init__(self, loc = [2, 0]):
         self.curr_loc = loc
@@ -61,13 +61,13 @@ class BOT:
         else:
             print("invalid move")
 
-    def turn(self, direction):
-        if direction == "F":
-            # do soething
-        elif direction == "L":
-            # do something else
-        else:
-            print("WRONG DIRECTION INPUT!")
+    # def turn(self, direction):
+    #     if direction == "F":
+    #         # do soething
+    #     elif direction == "L":
+    #         # do something else
+    #     else:
+    #         print("WRONG DIRECTION INPUT!")
 
     def take_measurement(self):
         left_msrmt = raw_input("Left Measurement: ")
@@ -97,6 +97,7 @@ class BOT:
         # else:
         #     return True
         return True
+
 
 class GAME_GO:
     def __init__(self, maze, bot):
